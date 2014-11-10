@@ -6,12 +6,12 @@ jQuery plugin for [Alasql](https://github.com/agershun/alasql) JavaScript databa
 The idea: make it simple as:
 ```
     $.sql('CREATE TABLE cities (city STRING, country STRING));');
-    $.sql("INSERT INTO country VALUES ('Gent', 'Belgium'), ('Paris', 'France', 'Moscow', 'Russia')");
+    $.sql("INSERT INTO country VALUES ('Gent', 'Belgium'),('Paris', 'France'),('Beijing','Russia')");
     var people = [
       { name: 'Joan Palmer', city: 'Gent'},
       { name: 'Brenda Alba', city: 'Paris'},
-      { name: 'Xi Lee', city: 'Bejing'},
+      { name: 'Lee Hi', city: 'Beijing'},
     ];
-    console.log( $.sql('SELECT * FROM ? JOIN cities ON city WHERE country == "Belgium"', [people]) );
+    var res = $.sql('SELECT * FROM ? JOIN cities ON city WHERE country == "Belgium"', [people]);
 ```
 
